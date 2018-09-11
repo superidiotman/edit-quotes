@@ -7,9 +7,9 @@ import time
 import os
 
 if web:
-  client = pytumblr.TumblrRestClient({os.environ.get('consumer_key'),
+  client = pytumblr.TumblrRestClient(os.environ.get('consumer_key'),
       os.environ.get('consumer_secret'), os.environ.get('access_token'),
-      os.environ.get('access_secret')})
+      os.environ.get('access_secret'))
   gKey = os.environ.get('gKey')
   gsSheetID = os.environ.get('gsSheetID')
 else:
