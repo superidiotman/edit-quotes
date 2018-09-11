@@ -28,4 +28,4 @@ for q in qList:
   client.create_text("editquotesrobit", body=renderQuote(q))
   # Posts to Tumblr, which x-posts to Twitter through IFTTT - sometimes takes a few minutes
   print("tweeted another")
-  time.sleep(300)
+  time.sleep(2500)
