@@ -20,7 +20,7 @@ response = requests.get(f"https://sheets.googleapis.com/v4/spreadsheets/{gsSheet
 qList = response.json()["values"]
 
 def renderQuote(row):
-  return f"{row[0]} -{row[1]}"
+  return f"#{np.random.randint(69,999)} {row[0]} -{row[1]}"
 
 np.random.shuffle(qList)
 
