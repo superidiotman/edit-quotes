@@ -15,7 +15,7 @@ if web:
 else:
   from config import client, gKey, gsSheetID
 
-sheetRange = "A2:B300"
+sheetRange = "A2:B9999"
 response = requests.get(f"https://sheets.googleapis.com/v4/spreadsheets/{gsSheetID}/values/Sheet1!{sheetRange}?key={gKey}")
 qList = response.json()["values"]
 
@@ -28,4 +28,4 @@ for q in qList:
   client.create_text("editquotesrobit", body=renderQuote(q))
   # Posts to Tumblr, which x-posts to Twitter through IFTTT - sometimes takes a few minutes
   print("tweeted another")
-  time.sleep(2500)
+  time.sleep(4000)
